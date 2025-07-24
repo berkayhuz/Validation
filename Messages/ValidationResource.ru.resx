@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessToken_Invalid" xml:space="preserve">
+  <value>Неверный формат токена доступа.</value>
+</data>
+<data name="Base64_Invalid" xml:space="preserve">
+  <value>Указанная строка не является допустимым значением в формате Base64.</value>
+</data>
+<data name="ConstantValue" xml:space="preserve">
+  <value>Это поле должно быть равно «{0}».</value>
+</data>
+<data name="CreditCard_Invalid" xml:space="preserve">
+  <value>Номер кредитной карты недействителен.</value>
+</data>
+<data name="Currency_Invalid" xml:space="preserve">
+  <value>Код валюты недействителен или не поддерживается.</value>
+</data>
+<data name="DateRange_StartAfterEnd" xml:space="preserve">
+  <value>Дата начала должна быть раньше или равна дате окончания.</value>
+</data>
+<data name="Date_BusinessDay" xml:space="preserve">
+  <value>Дата должна приходиться на рабочий день (с понедельника по пятницу).</value>
+</data>
+<data name="Date_Future" xml:space="preserve">
+  <value>Дата должна быть в будущем.</value>
+</data>
+<data name="Date_InFuture" xml:space="preserve">
+  <value>Дата не может быть в будущем.</value>
+</data>
+<data name="Date_InPast" xml:space="preserve">
+  <value>Дата не может быть в прошлом.</value>
+</data>
+<data name="Date_LeapYear" xml:space="preserve">
+  <value>Дата должна приходиться на високосный год.</value>
+</data>
+<data name="Date_Only" xml:space="preserve">
+  <value>Должна быть указана только дата без времени.</value>
+</data>
+<data name="Date_Past" xml:space="preserve">
+  <value>Дата должна быть в прошлом.</value>
+</data>
+<data name="Date_Utc" xml:space="preserve">
+  <value>Дата должна быть указана в формате UTC.</value>
+</data>
+<data name="Date_Weekday" xml:space="preserve">
+  <value>Дата должна приходиться на будний день (с понедельника по пятницу).</value>
+</data>
+<data name="Date_Weekend" xml:space="preserve">
+  <value>Дата должна приходиться на выходной день (суббота или воскресенье).</value>
+</data>
+<data name="Decimal_PrecisionExceeded" xml:space="preserve">
+  <value>Число превышает допустимую точность или масштаб.</value>
+</data>
+<data name="Dev_AlwaysInvalid" xml:space="preserve">
+  <value>Всегда недопустимо для целей тестирования.</value>
+</data>
+<data name="Dev_AlwaysValid" xml:space="preserve">
+  <value>Всегда допустимо.</value>
+</data>
+<data name="Email_Invalid" xml:space="preserve">
+  <value>Недопустимый адрес электронной почты.</value>
+</data>
+<data name="Enum_Invalid" xml:space="preserve">
+  <value>Выбранное значение недопустимо.</value>
+</data>
+<data name="File_Invalid" xml:space="preserve">
+  <value>Недопустимый файл: размер или формат не поддерживаются.</value>
+</data>
+<data name="Guid_Empty" xml:space="preserve">
+  <value>{PropertyName} не может быть пустым.</value>
+</data>
+<data name="Hex_Invalid" xml:space="preserve">
+  <value>Значение не является допустимой шестнадцатеричной строкой.</value>
+</data>
+<data name="IBAN_Invalid" xml:space="preserve">
+  <value>Неверный номер IBAN.</value>
+</data>
+<data name="IpAddress_Invalid" xml:space="preserve">
+  <value>Недопустимый формат IP-адреса.</value>
+</data>
+<data name="Json_Invalid" xml:space="preserve">
+  <value>Значение не является допустимой строкой JSON.</value>
+</data>
+<data name="Localization_InvalidCulture" xml:space="preserve">
+  <value>Должен быть допустимый код культуры (например, en-US).</value>
+</data>
+<data name="Localization_InvalidLanguageTag" xml:space="preserve">
+  <value>Должен быть допустимый языковой тег (например, en-US, tr, fr-FR).</value>
+</data>
+<data name="Localization_InvalidTimeZone" xml:space="preserve">
+  <value>Должен быть допустимый идентификатор часового пояса.</value>
+</data>
+<data name="Logic_CompareWithOther" xml:space="preserve">
+  <value>Это поле должно соответствовать правилу сравнения с другим свойством.</value>
+</data>
+<data name="Logic_ConditionalRequired" xml:space="preserve">
+  <value>Это поле обязательно, если заполнено {0}.</value>
+</data>
+<data name="Logic_ConditionalRequiredWithValue" xml:space="preserve">
+  <value>Это поле обязательно, если {0} равно «{1}».</value>
+</data>
+<data name="Logic_DisallowedIf" xml:space="preserve">
+  <value>Это поле должно быть пустым при определённых условиях.</value>
+</data>
+<data name="Logic_EqualToOtherProperty" xml:space="preserve">
+  <value>Это поле должно быть равно {0}.</value>
+</data>
+<data name="Logic_MutuallyExclusiveProperties" xml:space="preserve">
+  <value>Должно быть установлено только одно из следующих полей: {0}.</value>
+</data>
+<data name="Logic_NotEqualToOtherProperty" xml:space="preserve">
+  <value>Это поле не должно быть равно {0}.</value>
+</data>
+<data name="Logic_RequiredIf" xml:space="preserve">
+  <value>Это поле обязательно при определённых условиях.</value>
+</data>
+<data name="MustBeNull" xml:space="preserve">
+  <value>Это поле должно быть null.</value>
+</data>
+<data name="MustNotBeNull" xml:space="preserve">
+  <value>Это поле не должно быть null.</value>
+</data>
+<data name="NationalId_Invalid" xml:space="preserve">
+  <value>Неверный идентификационный номер.</value>
+</data>
+<data name="Network_DomainName" xml:space="preserve">
+  <value>Должно быть допустимое доменное имя.</value>
+</data>
+<data name="Network_HostnameWithPort" xml:space="preserve">
+  <value>Должно быть допустимое имя хоста с портом.</value>
+</data>
+<data name="Network_IPv6Address" xml:space="preserve">
+  <value>Должен быть допустимый IPv6-адрес.</value>
+</data>
+<data name="Number_DivisibleBy" xml:space="preserve">
+  <value>Значение должно делиться на {0} без остатка.</value>
+</data>
+<data name="Number_Even" xml:space="preserve">
+  <value>Число должно быть чётным.</value>
+</data>
+<data name="Number_MaxDigits" xml:space="preserve">
+  <value>Число должно содержать не более {0} цифр.</value>
+</data>
+<data name="Number_MinDigits" xml:space="preserve">
+  <value>Число должно содержать не менее {0} цифр.</value>
+</data>
+<data name="Number_MultipleOf" xml:space="preserve">
+  <value>Число должно быть кратно {0}.</value>
+</data>
+<data name="Number_NotZero" xml:space="preserve">
+  <value>Значение не должно быть нулём.</value>
+</data>
+<data name="Number_Odd" xml:space="preserve">
+  <value>Число должно быть нечётным.</value>
+</data>
+<data name="Number_PercentageRange" xml:space="preserve">
+  <value>Значение должно быть процентом от 0 до 100.</value>
+</data>
+<data name="Number_PowerOfTwo" xml:space="preserve">
+  <value>Число должно быть степенью двойки.</value>
+</data>
+<data name="Number_Prime" xml:space="preserve">
+  <value>Число должно быть простым.</value>
+</data>
+<data name="Pagination_PageNumber" xml:space="preserve">
+  <value>Номер страницы должен быть ≥ 1.</value>
+</data>
+<data name="Pagination_PageSize" xml:space="preserve">
+  <value>Размер страницы должен быть от 1 до 100.</value>
+</data>
+<data name="Password_NumberRequired" xml:space="preserve">
+  <value>Пароль должен содержать хотя бы одну цифру.</value>
+</data>
+<data name="Password_SymbolRequired" xml:space="preserve">
+  <value>Пароль должен содержать хотя бы один символ.</value>
+</data>
+<data name="Password_UppercaseRequired" xml:space="preserve">
+  <value>Пароль должен содержать хотя бы одну заглавную букву.</value>
+</data>
+<data name="Password_Weak" xml:space="preserve">
+  <value>Пароль должен содержать заглавные и строчные буквы, цифры, специальные символы и быть длиной не менее {minLength} символов.</value>
+</data>
+<data name="Phone_Invalid" xml:space="preserve">
+  <value>Неверный формат номера телефона.</value>
+</data>
+<data name="Phone_TurkishMobile" xml:space="preserve">
+  <value>Должен быть допустимый номер мобильного телефона Турции.</value>
+</data>
+<data name="PostalCode_Invalid" xml:space="preserve">
+  <value>Неверный формат почтового индекса.</value>
+</data>
+<data name="Regex_Invalid" xml:space="preserve">
+  <value>Значение не соответствует требуемому формату.</value>
+</data>
+<data name="Security_Encrypted" xml:space="preserve">
+  <value>Ввод должен быть в допустимом зашифрованном формате.</value>
+</data>
+<data name="Security_InvalidFileName" xml:space="preserve">
+  <value>Имя файла не должно содержать недопустимые символы.</value>
+</data>
+<data name="Security_NoHtml" xml:space="preserve">
+  <value>Текст не должен содержать HTML-теги.</value>
+</data>
+<data name="Security_NoUnicodeSymbols" xml:space="preserve">
+  <value>Текст не должен содержать специальные символы Unicode или эмодзи.</value>
+</data>
+<data name="Security_PasswordComplexity" xml:space="preserve">
+  <value>Пароль должен содержать не менее {0} символов, включая букву, цифру и символ.</value>
+</data>
+<data name="Security_SqlInjectionSafe" xml:space="preserve">
+  <value>Ввод должен быть безопасным для SQL-инъекций.</value>
+</data>
+<data name="Security_XssSafe" xml:space="preserve">
+  <value>Ввод не должен содержать потенциально опасного XSS-контента.</value>
+</data>
+<data name="Slug_Invalid" xml:space="preserve">
+  <value>Значение должно быть допустимым slug (только строчные буквы, цифры и дефисы).</value>
+</data>
+<data name="String_AlphaNumericOnly" xml:space="preserve">
+  <value>Допускаются только буквы и цифры.</value>
+</data>
+<data name="String_CamelCase" xml:space="preserve">
+  <value>Текст должен быть в формате camelCase (например: exampleText).</value>
+</data>
+<data name="String_CountryCode" xml:space="preserve">
+  <value>Должен быть допустимый код страны (ISO 3166-1 alpha-2).</value>
+</data>
+<data name="String_CurrencyCode" xml:space="preserve">
+  <value>Должен быть допустимый код валюты (ISO 4217).</value>
+</data>
+<data name="String_EndsWith" xml:space="preserve">
+  <value>Значение должно заканчиваться на требуемый суффикс.</value>
+</data>
+<data name="String_HexColor" xml:space="preserve">
+  <value>Должен быть допустимый шестнадцатеричный цветовой код (например: #FFF или #FFFFFF).</value>
+</data>
+<data name="String_Hostname" xml:space="preserve">
+  <value>Должно быть допустимое имя хоста.</value>
+</data>
+<data name="String_JwtToken" xml:space="preserve">
+  <value>Должен быть допустимый JWT-токен.</value>
+</data>
+<data name="String_KebabCase" xml:space="preserve">
+  <value>Текст должен быть в формате kebab-case (например: example-text).</value>
+</data>
+<data name="String_LanguageCode" xml:space="preserve">
+  <value>Должен быть допустимый код языка (ISO 639-1).</value>
+</data>
+<data name="String_Lowercase" xml:space="preserve">
+  <value>Текст должен быть полностью в нижнем регистре.</value>
+</data>
+<data name="String_MacAddress" xml:space="preserve">
+  <value>Должен быть допустимый MAC-адрес.</value>
+</data>
+<data name="String_MimeType" xml:space="preserve">
+  <value>Должен быть допустимый MIME-тип (например: image/png).</value>
+</data>
+<data name="String_NoSpecialCharacters" xml:space="preserve">
+  <value>Не должно содержать специальных символов.</value>
+</data>
+<data name="String_NoWhitespace" xml:space="preserve">
+  <value>Значение не должно содержать пробельных символов.</value>
+</data>
+<data name="String_OnlyLetters" xml:space="preserve">
+  <value>Это поле должно содержать только буквы.</value>
+</data>
+<data name="String_OnlyLetters_Optional" xml:space="preserve">
+  <value>Если не пустое, должно содержать только буквы и пробелы.</value>
+</data>
+<data name="String_PascalCase" xml:space="preserve">
+  <value>Текст должен быть в формате PascalCase (например: ExampleText).</value>
+</data>
+<data name="String_SpecialCharRequired" xml:space="preserve">
+  <value>Значение должно содержать хотя бы один специальный символ.</value>
+</data>
+<data name="String_StartsWith" xml:space="preserve">
+  <value>Значение должно начинаться с требуемого префикса.</value>
+</data>
+<data name="String_StartsWithUppercase" xml:space="preserve">
+  <value>Это поле должно начинаться с заглавной буквы.</value>
+</data>
+<data name="String_TrimmedEmpty" xml:space="preserve">
+  <value>Это поле не может быть пустым или состоять только из пробелов.</value>
+</data>
+<data name="String_Uppercase" xml:space="preserve">
+  <value>Текст должен быть полностью в верхнем регистре.</value>
+</data>
+<data name="String_Version" xml:space="preserve">
+  <value>Должен быть допустимый формат версии (например: 1.0.0).</value>
+</data>
+<data name="Time_Range" xml:space="preserve">
+  <value>Время должно быть между {0} и {1}.</value>
+</data>
+<data name="Url_Instagram" xml:space="preserve">
+  <value>Должен быть допустимый URL Instagram.</value>
+</data>
+<data name="Url_Invalid" xml:space="preserve">
+  <value>Неверный формат URL. Допускаются только HTTP и HTTPS.</value>
+</data>
+<data name="Url_YouTube" xml:space="preserve">
+  <value>Должен быть допустимый URL YouTube.</value>
+</data>
+<data name="Xml_Invalid" xml:space="preserve">
+  <value>Значение не является допустимой строкой XML.</value>
+</data>
+
+</root>

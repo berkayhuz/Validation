@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessToken_Invalid" xml:space="preserve">
+  <value>访问令牌格式无效。</value>
+</data>
+<data name="Base64_Invalid" xml:space="preserve">
+  <value>提供的字符串不是有效的Base64编码值。</value>
+</data>
+<data name="ConstantValue" xml:space="preserve">
+  <value>此字段必须等于“{0}”。</value>
+</data>
+<data name="CreditCard_Invalid" xml:space="preserve">
+  <value>信用卡号码无效。</value>
+</data>
+<data name="Currency_Invalid" xml:space="preserve">
+  <value>货币代码无效或不受支持。</value>
+</data>
+<data name="DateRange_StartAfterEnd" xml:space="preserve">
+  <value>开始日期必须早于或等于结束日期。</value>
+</data>
+<data name="Date_BusinessDay" xml:space="preserve">
+  <value>日期必须是工作日（星期一至星期五）。</value>
+</data>
+<data name="Date_Future" xml:space="preserve">
+  <value>日期必须在将来。</value>
+</data>
+<data name="Date_InFuture" xml:space="preserve">
+  <value>日期不能在将来。</value>
+</data>
+<data name="Date_InPast" xml:space="preserve">
+  <value>日期不能在过去。</value>
+</data>
+<data name="Date_LeapYear" xml:space="preserve">
+  <value>日期必须在闰年。</value>
+</data>
+<data name="Date_Only" xml:space="preserve">
+  <value>必须是无时间的日期。</value>
+</data>
+<data name="Date_Past" xml:space="preserve">
+  <value>日期必须在过去。</value>
+</data>
+<data name="Date_Utc" xml:space="preserve">
+  <value>日期必须标记为UTC。</value>
+</data>
+<data name="Date_Weekday" xml:space="preserve">
+  <value>日期必须是工作日（星期一至星期五）。</value>
+</data>
+<data name="Date_Weekend" xml:space="preserve">
+  <value>日期必须是周末（星期六或星期日）。</value>
+</data>
+<data name="Decimal_PrecisionExceeded" xml:space="preserve">
+  <value>数字超过允许的精度或小数位数。</value>
+</data>
+<data name="Dev_AlwaysInvalid" xml:space="preserve">
+  <value>始终无效，用于测试目的。</value>
+</data>
+<data name="Dev_AlwaysValid" xml:space="preserve">
+  <value>始终有效。</value>
+</data>
+<data name="Email_Invalid" xml:space="preserve">
+  <value>电子邮件地址无效。</value>
+</data>
+<data name="Enum_Invalid" xml:space="preserve">
+  <value>所选值不是有效选项。</value>
+</data>
+<data name="File_Invalid" xml:space="preserve">
+  <value>无效文件：大小或格式不允许。</value>
+</data>
+<data name="Guid_Empty" xml:space="preserve">
+  <value>{PropertyName}不能为空。</value>
+</data>
+<data name="Hex_Invalid" xml:space="preserve">
+  <value>该值不是有效的十六进制字符串。</value>
+</data>
+<data name="IBAN_Invalid" xml:space="preserve">
+  <value>IBAN号码无效。</value>
+</data>
+<data name="IpAddress_Invalid" xml:space="preserve">
+  <value>IP地址格式无效。</value>
+</data>
+<data name="Json_Invalid" xml:space="preserve">
+  <value>该值不是有效的JSON字符串。</value>
+</data>
+<data name="Localization_InvalidCulture" xml:space="preserve">
+  <value>必须是有效的区域性代码（例如：en-US）。</value>
+</data>
+<data name="Localization_InvalidLanguageTag" xml:space="preserve">
+  <value>必须是有效的语言标签（例如：en-US、tr、fr-FR）。</value>
+</data>
+<data name="Localization_InvalidTimeZone" xml:space="preserve">
+  <value>必须是有效的时区ID。</value>
+</data>
+<data name="Logic_CompareWithOther" xml:space="preserve">
+  <value>此字段必须与另一个属性进行比较。</value>
+</data>
+<data name="Logic_ConditionalRequired" xml:space="preserve">
+  <value>当 {0} 已填写时，此字段为必填。</value>
+</data>
+<data name="Logic_ConditionalRequiredWithValue" xml:space="preserve">
+  <value>当 {0} 为“{1}”时，此字段为必填。</value>
+</data>
+<data name="Logic_DisallowedIf" xml:space="preserve">
+  <value>在某些条件下，此字段必须为空。</value>
+</data>
+<data name="Logic_EqualToOtherProperty" xml:space="preserve">
+  <value>此字段必须等于 {0}。</value>
+</data>
+<data name="Logic_MutuallyExclusiveProperties" xml:space="preserve">
+  <value>以下字段中只能设置一个：{0}。</value>
+</data>
+<data name="Logic_NotEqualToOtherProperty" xml:space="preserve">
+  <value>此字段不能等于 {0}。</value>
+</data>
+<data name="Logic_RequiredIf" xml:space="preserve">
+  <value>在特定条件下，此字段为必填。</value>
+</data>
+<data name="MustBeNull" xml:space="preserve">
+  <value>此字段必须为空。</value>
+</data>
+<data name="MustNotBeNull" xml:space="preserve">
+  <value>此字段不能为空。</value>
+</data>
+<data name="NationalId_Invalid" xml:space="preserve">
+  <value>国家身份证号码无效。</value>
+</data>
+<data name="Network_DomainName" xml:space="preserve">
+  <value>必须是有效的域名。</value>
+</data>
+<data name="Network_HostnameWithPort" xml:space="preserve">
+  <value>必须是带端口的有效主机名。</value>
+</data>
+<data name="Network_IPv6Address" xml:space="preserve">
+  <value>必须是有效的IPv6地址。</value>
+</data>
+<data name="Number_DivisibleBy" xml:space="preserve">
+  <value>值必须能被 {0} 整除。</value>
+</data>
+<data name="Number_Even" xml:space="preserve">
+  <value>数字必须是偶数。</value>
+</data>
+<data name="Number_MaxDigits" xml:space="preserve">
+  <value>数字最多不能超过 {0} 位数。</value>
+</data>
+<data name="Number_MinDigits" xml:space="preserve">
+  <value>数字最少必须有 {0} 位数。</value>
+</data>
+<data name="Number_MultipleOf" xml:space="preserve">
+  <value>数字必须是 {0} 的倍数。</value>
+</data>
+<data name="Number_NotZero" xml:space="preserve">
+  <value>值不能为零。</value>
+</data>
+<data name="Number_Odd" xml:space="preserve">
+  <value>数字必须是奇数。</value>
+</data>
+<data name="Number_PercentageRange" xml:space="preserve">
+  <value>值必须是0到100之间的百分比。</value>
+</data>
+<data name="Number_PowerOfTwo" xml:space="preserve">
+  <value>数字必须是2的幂。</value>
+</data>
+<data name="Number_Prime" xml:space="preserve">
+  <value>数字必须是质数。</value>
+</data>
+<data name="Pagination_PageNumber" xml:space="preserve">
+  <value>页码必须大于或等于 1。</value>
+</data>
+<data name="Pagination_PageSize" xml:space="preserve">
+  <value>每页大小必须在 1 到 100 之间。</value>
+</data>
+<data name="Password_NumberRequired" xml:space="preserve">
+  <value>密码必须包含至少一个数字。</value>
+</data>
+<data name="Password_SymbolRequired" xml:space="preserve">
+  <value>密码必须包含至少一个符号。</value>
+</data>
+<data name="Password_UppercaseRequired" xml:space="preserve">
+  <value>密码必须包含至少一个大写字母。</value>
+</data>
+<data name="Password_Weak" xml:space="preserve">
+  <value>密码必须包含大写字母、小写字母、数字、特殊字符，并且长度不少于 {minLength} 个字符。</value>
+</data>
+<data name="Phone_Invalid" xml:space="preserve">
+  <value>电话号码格式无效。</value>
+</data>
+<data name="Phone_TurkishMobile" xml:space="preserve">
+  <value>必须是有效的土耳其手机号码。</value>
+</data>
+<data name="PostalCode_Invalid" xml:space="preserve">
+  <value>邮政编码格式无效。</value>
+</data>
+<data name="Regex_Invalid" xml:space="preserve">
+  <value>该值不符合所需格式。</value>
+</data>
+<data name="Security_Encrypted" xml:space="preserve">
+  <value>输入必须是有效的加密格式。</value>
+</data>
+<data name="Security_InvalidFileName" xml:space="preserve">
+  <value>文件名不能包含无效字符。</value>
+</data>
+<data name="Security_NoHtml" xml:space="preserve">
+  <value>文本不能包含HTML标签。</value>
+</data>
+<data name="Security_NoUnicodeSymbols" xml:space="preserve">
+  <value>文本不能包含特殊的Unicode符号或表情符号。</value>
+</data>
+<data name="Security_PasswordComplexity" xml:space="preserve">
+  <value>密码必须至少包含 {0} 个字符，并包含字母、数字和符号。</value>
+</data>
+<data name="Security_SqlInjectionSafe" xml:space="preserve">
+  <value>输入必须防止SQL注入。</value>
+</data>
+<data name="Security_XssSafe" xml:space="preserve">
+  <value>输入不得包含潜在的XSS内容。</value>
+</data>
+<data name="Slug_Invalid" xml:space="preserve">
+  <value>该值必须是有效的 slug（仅限小写字母、数字和短横线）。</value>
+</data>
+<data name="String_AlphaNumericOnly" xml:space="preserve">
+  <value>只允许使用字母和数字。</value>
+</data>
+<data name="String_CamelCase" xml:space="preserve">
+  <value>文本必须为 camelCase 格式（例如：exampleText）。</value>
+</data>
+<data name="String_CountryCode" xml:space="preserve">
+  <value>必须是有效的国家代码（ISO 3166-1 alpha-2）。</value>
+</data>
+<data name="String_CurrencyCode" xml:space="preserve">
+  <value>必须是有效的货币代码（ISO 4217）。</value>
+</data>
+<data name="String_EndsWith" xml:space="preserve">
+  <value>该值必须以所需的后缀结尾。</value>
+</data>
+<data name="String_HexColor" xml:space="preserve">
+  <value>必须是有效的十六进制颜色代码（例如：#FFF 或 #FFFFFF）。</value>
+</data>
+<data name="String_Hostname" xml:space="preserve">
+  <value>必须是有效的主机名。</value>
+</data>
+<data name="String_JwtToken" xml:space="preserve">
+  <value>必须是有效的JWT令牌。</value>
+</data>
+<data name="String_KebabCase" xml:space="preserve">
+  <value>文本必须为 kebab-case 格式（例如：example-text）。</value>
+</data>
+<data name="String_LanguageCode" xml:space="preserve">
+  <value>必须是有效的语言代码（ISO 639-1）。</value>
+</data>
+<data name="String_Lowercase" xml:space="preserve">
+  <value>文本必须全为小写。</value>
+</data>
+<data name="String_MacAddress" xml:space="preserve">
+  <value>必须是有效的MAC地址。</value>
+</data>
+<data name="String_MimeType" xml:space="preserve">
+  <value>必须是有效的MIME类型（例如：image/png）。</value>
+</data>
+<data name="String_NoSpecialCharacters" xml:space="preserve">
+  <value>不能包含特殊字符。</value>
+</data>
+<data name="String_NoWhitespace" xml:space="preserve">
+  <value>该值不能包含任何空白字符。</value>
+</data>
+<data name="String_OnlyLetters" xml:space="preserve">
+  <value>此字段只能包含字母。</value>
+</data>
+<data name="String_OnlyLetters_Optional" xml:space="preserve">
+  <value>如果不为空，则只能包含字母和空格。</value>
+</data>
+<data name="String_PascalCase" xml:space="preserve">
+  <value>文本必须为 PascalCase 格式（例如：ExampleText）。</value>
+</data>
+<data name="String_SpecialCharRequired" xml:space="preserve">
+  <value>该值必须包含至少一个特殊字符。</value>
+</data>
+<data name="String_StartsWith" xml:space="preserve">
+  <value>该值必须以所需的前缀开头。</value>
+</data>
+<data name="String_StartsWithUppercase" xml:space="preserve">
+  <value>此字段必须以大写字母开头。</value>
+</data>
+<data name="String_TrimmedEmpty" xml:space="preserve">
+  <value>此字段不能为空或仅为空格。</value>
+</data>
+<data name="String_Uppercase" xml:space="preserve">
+  <value>文本必须全为大写。</value>
+</data>
+<data name="String_Version" xml:space="preserve">
+  <value>必须是有效的版本格式（例如：1.0.0）。</value>
+</data>
+<data name="Time_Range" xml:space="preserve">
+  <value>时间必须在 {0} 和 {1} 之间。</value>
+</data>
+<data name="Url_Instagram" xml:space="preserve">
+  <value>必须是有效的Instagram链接。</value>
+</data>
+<data name="Url_Invalid" xml:space="preserve">
+  <value>URL格式无效。仅允许HTTP和HTTPS链接。</value>
+</data>
+<data name="Url_YouTube" xml:space="preserve">
+  <value>必须是有效的YouTube链接。</value>
+</data>
+<data name="Xml_Invalid" xml:space="preserve">
+  <value>该值不是有效的XML字符串。</value>
+</data>
+
+</root>

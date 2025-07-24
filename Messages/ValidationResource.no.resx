@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessToken_Invalid" xml:space="preserve">
+  <value>Tilgangstokenets format er ugyldig.</value>
+</data>
+<data name="Base64_Invalid" xml:space="preserve">
+  <value>Den angitte strengen er ikke en gyldig Base64-kodet verdi.</value>
+</data>
+<data name="ConstantValue" xml:space="preserve">
+  <value>Dette feltet må være lik '{0}'.</value>
+</data>
+<data name="CreditCard_Invalid" xml:space="preserve">
+  <value>Kredittkortnummeret er ugyldig.</value>
+</data>
+<data name="Currency_Invalid" xml:space="preserve">
+  <value>Valutakoden er ugyldig eller ikke støttet.</value>
+</data>
+<data name="DateRange_StartAfterEnd" xml:space="preserve">
+  <value>Startdato må være før eller lik sluttdato.</value>
+</data>
+<data name="Date_BusinessDay" xml:space="preserve">
+  <value>Datoen må være en virkedag (mandag til fredag).</value>
+</data>
+<data name="Date_Future" xml:space="preserve">
+  <value>Datoen må være i fremtiden.</value>
+</data>
+<data name="Date_InFuture" xml:space="preserve">
+  <value>Datoen kan ikke være i fremtiden.</value>
+</data>
+<data name="Date_InPast" xml:space="preserve">
+  <value>Datoen kan ikke være i fortiden.</value>
+</data>
+<data name="Date_LeapYear" xml:space="preserve">
+  <value>Datoen må være i et skuddår.</value>
+</data>
+<data name="Date_Only" xml:space="preserve">
+  <value>Må være en dato uten klokkeslett.</value>
+</data>
+<data name="Date_Past" xml:space="preserve">
+  <value>Datoen må være i fortiden.</value>
+</data>
+<data name="Date_Utc" xml:space="preserve">
+  <value>Datoen må være angitt som UTC.</value>
+</data>
+<data name="Date_Weekday" xml:space="preserve">
+  <value>Datoen må være en ukedag (mandag til fredag).</value>
+</data>
+<data name="Date_Weekend" xml:space="preserve">
+  <value>Datoen må være i helgen (lørdag eller søndag).</value>
+</data>
+<data name="Decimal_PrecisionExceeded" xml:space="preserve">
+  <value>Tallet overstiger tillatt presisjon eller skala.</value>
+</data>
+<data name="Dev_AlwaysInvalid" xml:space="preserve">
+  <value>Alltid ugyldig for testformål.</value>
+</data>
+<data name="Dev_AlwaysValid" xml:space="preserve">
+  <value>Alltid gyldig.</value>
+</data>
+<data name="Email_Invalid" xml:space="preserve">
+  <value>Ugyldig e-postadresse.</value>
+</data>
+<data name="Enum_Invalid" xml:space="preserve">
+  <value>Den valgte verdien er ikke et gyldig alternativ.</value>
+</data>
+<data name="File_Invalid" xml:space="preserve">
+  <value>Ugyldig fil: størrelse eller format er ikke tillatt.</value>
+</data>
+<data name="Guid_Empty" xml:space="preserve">
+  <value>{PropertyName} kan ikke være tom.</value>
+</data>
+<data name="Hex_Invalid" xml:space="preserve">
+  <value>Verdien er ikke en gyldig heksadesimal streng.</value>
+</data>
+<data name="IBAN_Invalid" xml:space="preserve">
+  <value>IBAN-nummeret er ugyldig.</value>
+</data>
+<data name="IpAddress_Invalid" xml:space="preserve">
+  <value>IP-adresseformatet er ugyldig.</value>
+</data>
+<data name="Json_Invalid" xml:space="preserve">
+  <value>Verdien er ikke en gyldig JSON-streng.</value>
+</data>
+<data name="Localization_InvalidCulture" xml:space="preserve">
+  <value>Må være en gyldig kulturkode (f.eks. en-US).</value>
+</data>
+<data name="Localization_InvalidLanguageTag" xml:space="preserve">
+  <value>Må være en gyldig språkkode (f.eks. en-US, tr, fr-FR).</value>
+</data>
+<data name="Localization_InvalidTimeZone" xml:space="preserve">
+  <value>Må være en gyldig tidssone-ID.</value>
+</data>
+<data name="Logic_CompareWithOther" xml:space="preserve">
+  <value>Dette feltet må oppfylle en sammenligningsregel med en annen egenskap.</value>
+</data>
+<data name="Logic_ConditionalRequired" xml:space="preserve">
+  <value>Dette feltet er påkrevd når {0} er angitt.</value>
+</data>
+<data name="Logic_ConditionalRequiredWithValue" xml:space="preserve">
+  <value>Dette feltet er påkrevd når {0} er '{1}'.</value>
+</data>
+<data name="Logic_DisallowedIf" xml:space="preserve">
+  <value>Dette feltet må være tomt under visse betingelser.</value>
+</data>
+<data name="Logic_EqualToOtherProperty" xml:space="preserve">
+  <value>Dette feltet må være lik {0}.</value>
+</data>
+<data name="Logic_MutuallyExclusiveProperties" xml:space="preserve">
+  <value>Kun ett av følgende felt må være satt: {0}.</value>
+</data>
+<data name="Logic_NotEqualToOtherProperty" xml:space="preserve">
+  <value>Dette feltet må ikke være lik {0}.</value>
+</data>
+<data name="Logic_RequiredIf" xml:space="preserve">
+  <value>Dette feltet er påkrevd under visse betingelser.</value>
+</data>
+<data name="MustBeNull" xml:space="preserve">
+  <value>Dette feltet må være null.</value>
+</data>
+<data name="MustNotBeNull" xml:space="preserve">
+  <value>Dette feltet må ikke være null.</value>
+</data>
+<data name="NationalId_Invalid" xml:space="preserve">
+  <value>Personnummeret er ugyldig.</value>
+</data>
+<data name="Network_DomainName" xml:space="preserve">
+  <value>Må være et gyldig domenenavn.</value>
+</data>
+<data name="Network_HostnameWithPort" xml:space="preserve">
+  <value>Må være et gyldig vertsnavn med port.</value>
+</data>
+<data name="Network_IPv6Address" xml:space="preserve">
+  <value>Må være en gyldig IPv6-adresse.</value>
+</data>
+<data name="Number_DivisibleBy" xml:space="preserve">
+  <value>Verdien må være delelig med {0}.</value>
+</data>
+<data name="Number_Even" xml:space="preserve">
+  <value>Tallet må være et partall.</value>
+</data>
+<data name="Number_MaxDigits" xml:space="preserve">
+  <value>Tallet kan ha maksimalt {0} sifre.</value>
+</data>
+<data name="Number_MinDigits" xml:space="preserve">
+  <value>Tallet må ha minst {0} sifre.</value>
+</data>
+<data name="Number_MultipleOf" xml:space="preserve">
+  <value>Tallet må være et multiplum av {0}.</value>
+</data>
+<data name="Number_NotZero" xml:space="preserve">
+  <value>Verdien må ikke være null.</value>
+</data>
+<data name="Number_Odd" xml:space="preserve">
+  <value>Tallet må være et oddetall.</value>
+</data>
+<data name="Number_PercentageRange" xml:space="preserve">
+  <value>Verdien må være en prosentverdi mellom 0 og 100.</value>
+</data>
+<data name="Number_PowerOfTwo" xml:space="preserve">
+  <value>Tallet må være en tofaktor (2^n).</value>
+</data>
+<data name="Number_Prime" xml:space="preserve">
+  <value>Tallet må være et primtall.</value>
+</data>
+<data name="Pagination_PageNumber" xml:space="preserve">
+  <value>Sidetallet må være ≥ 1.</value>
+</data>
+<data name="Pagination_PageSize" xml:space="preserve">
+  <value>Sidestørrelsen må være mellom 1 og 100.</value>
+</data>
+<data name="Password_NumberRequired" xml:space="preserve">
+  <value>Passordet må inneholde minst ett tall.</value>
+</data>
+<data name="Password_SymbolRequired" xml:space="preserve">
+  <value>Passordet må inneholde minst ett symbol.</value>
+</data>
+<data name="Password_UppercaseRequired" xml:space="preserve">
+  <value>Passordet må inneholde minst én stor bokstav.</value>
+</data>
+<data name="Password_Weak" xml:space="preserve">
+  <value>Passordet må inneholde store og små bokstaver, tall, spesialtegn og være minst {minLength} tegn langt.</value>
+</data>
+<data name="Phone_Invalid" xml:space="preserve">
+  <value>Telefonnummerets format er ugyldig.</value>
+</data>
+<data name="Phone_TurkishMobile" xml:space="preserve">
+  <value>Må være et gyldig tyrkisk mobilnummer.</value>
+</data>
+<data name="PostalCode_Invalid" xml:space="preserve">
+  <value>Postnummerets format er ugyldig.</value>
+</data>
+<data name="Regex_Invalid" xml:space="preserve">
+  <value>Verdien samsvarer ikke med det påkrevde formatet.</value>
+</data>
+<data name="Security_Encrypted" xml:space="preserve">
+  <value>Inndata må være i et gyldig kryptert format.</value>
+</data>
+<data name="Security_InvalidFileName" xml:space="preserve">
+  <value>Filnavnet må ikke inneholde ugyldige tegn.</value>
+</data>
+<data name="Security_NoHtml" xml:space="preserve">
+  <value>Teksten må ikke inneholde HTML-tagger.</value>
+</data>
+<data name="Security_NoUnicodeSymbols" xml:space="preserve">
+  <value>Teksten må ikke inneholde spesielle Unicode-symboler eller emoji.</value>
+</data>
+<data name="Security_PasswordComplexity" xml:space="preserve">
+  <value>Passordet må være minst {0} tegn langt og inneholde en bokstav, et tall og et symbol.</value>
+</data>
+<data name="Security_SqlInjectionSafe" xml:space="preserve">
+  <value>Inndata må være trygg mot SQL-injeksjon.</value>
+</data>
+<data name="Security_XssSafe" xml:space="preserve">
+  <value>Inndata må ikke inneholde potensiell XSS-kode.</value>
+</data>
+<data name="Slug_Invalid" xml:space="preserve">
+  <value>Verdien må være en gyldig slug (kun små bokstaver, tall og bindestreker).</value>
+</data>
+<data name="String_AlphaNumericOnly" xml:space="preserve">
+  <value>Kun bokstaver og tall er tillatt.</value>
+</data>
+<data name="String_CamelCase" xml:space="preserve">
+  <value>Teksten må være i camelCase-format (f.eks. eksempelTekst).</value>
+</data>
+<data name="String_CountryCode" xml:space="preserve">
+  <value>Må være en gyldig landskode (ISO 3166-1 alfa-2).</value>
+</data>
+<data name="String_CurrencyCode" xml:space="preserve">
+  <value>Må være en gyldig valutakode (ISO 4217).</value>
+</data>
+<data name="String_EndsWith" xml:space="preserve">
+  <value>Verdien må slutte med det nødvendige suffikset.</value>
+</data>
+<data name="String_HexColor" xml:space="preserve">
+  <value>Må være en gyldig hex-fargekode (f.eks. #FFF eller #FFFFFF).</value>
+</data>
+<data name="String_Hostname" xml:space="preserve">
+  <value>Må være et gyldig vertsnavn.</value>
+</data>
+<data name="String_JwtToken" xml:space="preserve">
+  <value>Må være et gyldig JWT-token.</value>
+</data>
+<data name="String_KebabCase" xml:space="preserve">
+  <value>Teksten må være i kebab-case-format (f.eks. eksempel-tekst).</value>
+</data>
+<data name="String_LanguageCode" xml:space="preserve">
+  <value>Må være en gyldig språkkode (ISO 639-1).</value>
+</data>
+<data name="String_Lowercase" xml:space="preserve">
+  <value>Teksten må være helt i små bokstaver.</value>
+</data>
+<data name="String_MacAddress" xml:space="preserve">
+  <value>Må være en gyldig MAC-adresse.</value>
+</data>
+<data name="String_MimeType" xml:space="preserve">
+  <value>Må være en gyldig MIME-type (f.eks. image/png).</value>
+</data>
+<data name="String_NoSpecialCharacters" xml:space="preserve">
+  <value>Må ikke inneholde spesialtegn.</value>
+</data>
+<data name="String_NoWhitespace" xml:space="preserve">
+  <value>Verdien må ikke inneholde mellomrom.</value>
+</data>
+<data name="String_OnlyLetters" xml:space="preserve">
+  <value>Dette feltet må kun inneholde bokstaver.</value>
+</data>
+<data name="String_OnlyLetters_Optional" xml:space="preserve">
+  <value>Hvis ikke tomt, må det bare inneholde bokstaver og mellomrom.</value>
+</data>
+<data name="String_PascalCase" xml:space="preserve">
+  <value>Teksten må være i PascalCase-format (f.eks. EksempelTekst).</value>
+</data>
+<data name="String_SpecialCharRequired" xml:space="preserve">
+  <value>Verdien må inneholde minst ett spesialtegn.</value>
+</data>
+<data name="String_StartsWith" xml:space="preserve">
+  <value>Verdien må starte med det nødvendige prefikset.</value>
+</data>
+<data name="String_StartsWithUppercase" xml:space="preserve">
+  <value>Dette feltet må starte med en stor bokstav.</value>
+</data>
+<data name="String_TrimmedEmpty" xml:space="preserve">
+  <value>Dette feltet kan ikke være tomt eller kun mellomrom.</value>
+</data>
+<data name="String_Uppercase" xml:space="preserve">
+  <value>Teksten må være helt i store bokstaver.</value>
+</data>
+<data name="String_Version" xml:space="preserve">
+  <value>Må være i gyldig versjonsformat (f.eks. 1.0.0).</value>
+</data>
+<data name="Time_Range" xml:space="preserve">
+  <value>Tidspunktet må være mellom {0} og {1}.</value>
+</data>
+<data name="Url_Instagram" xml:space="preserve">
+  <value>Må være en gyldig Instagram-nettadresse.</value>
+</data>
+<data name="Url_Invalid" xml:space="preserve">
+  <value>Nettadresseformatet er ugyldig. Kun HTTP- og HTTPS-adresser er tillatt.</value>
+</data>
+<data name="Url_YouTube" xml:space="preserve">
+  <value>Må være en gyldig YouTube-nettadresse.</value>
+</data>
+<data name="Xml_Invalid" xml:space="preserve">
+  <value>Verdien er ikke en gyldig XML-streng.</value>
+</data>
+
+</root>

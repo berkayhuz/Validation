@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessToken_Invalid" xml:space="preserve">
+    <value>Erişim jetonunun biçimi geçersiz.</value>
+  </data>
+  <data name="Base64_Invalid" xml:space="preserve">
+    <value>Sağlanan metin geçerli bir Base64 kodlaması değil.</value>
+  </data>
+  <data name="ConstantValue" xml:space="preserve">
+    <value>Bu alan '{0}' değerine eşit olmalıdır.</value>
+  </data>
+  <data name="CreditCard_Invalid" xml:space="preserve">
+    <value>Kredi kartı numarası geçersiz.</value>
+  </data>
+  <data name="Currency_Invalid" xml:space="preserve">
+    <value>Para birimi kodu geçersiz veya desteklenmiyor.</value>
+  </data>
+  <data name="DateRange_StartAfterEnd" xml:space="preserve">
+    <value>Başlangıç tarihi, bitiş tarihinden önce veya ona eşit olmalıdır.</value>
+  </data>
+  <data name="Date_BusinessDay" xml:space="preserve">
+    <value>Tarih iş günü olmalıdır (Pazartesi - Cuma arası).</value>
+  </data>
+  <data name="Date_Future" xml:space="preserve">
+    <value>Tarih gelecekte olmalıdır.</value>
+  </data>
+  <data name="Date_InFuture" xml:space="preserve">
+    <value>Tarih gelecekte olamaz.</value>
+  </data>
+  <data name="Date_InPast" xml:space="preserve">
+    <value>Tarih geçmişte olamaz.</value>
+  </data>
+  <data name="Date_LeapYear" xml:space="preserve">
+    <value>Tarih artık bir yılda olmalıdır.</value>
+  </data>
+  <data name="Date_Only" xml:space="preserve">
+    <value>Tarih, saat içermemelidir.</value>
+  </data>
+  <data name="Date_Past" xml:space="preserve">
+    <value>Tarih geçmişte olmalıdır.</value>
+  </data>
+  <data name="Date_Utc" xml:space="preserve">
+    <value>Tarih UTC olarak işaretlenmiş olmalıdır.</value>
+  </data>
+  <data name="Date_Weekday" xml:space="preserve">
+    <value>Tarih hafta içi bir gün olmalıdır (Pazartesi - Cuma arası).</value>
+  </data>
+  <data name="Date_Weekend" xml:space="preserve">
+    <value>Tarih hafta sonu bir gün olmalıdır (Cumartesi veya Pazar).</value>
+  </data>
+  <data name="Decimal_PrecisionExceeded" xml:space="preserve">
+    <value>Sayı izin verilen hassasiyet veya ölçeği aşıyor.</value>
+  </data>
+  <data name="Dev_AlwaysInvalid" xml:space="preserve">
+    <value>Test amaçlı olarak her zaman geçersiz.</value>
+  </data>
+  <data name="Dev_AlwaysValid" xml:space="preserve">
+    <value>Her zaman geçerli.</value>
+  </data>
+  <data name="Email_Invalid" xml:space="preserve">
+    <value>Geçersiz e-posta adresi.</value>
+  </data>
+  <data name="Enum_Invalid" xml:space="preserve">
+    <value>Seçilen değer geçerli bir seçenek değil.</value>
+  </data>
+  <data name="File_Invalid" xml:space="preserve">
+    <value>Geçersiz dosya: boyut veya biçim uygun değil.</value>
+  </data>
+  <data name="Guid_Empty" xml:space="preserve">
+    <value>{PropertyName} boş olamaz.</value>
+  </data>
+  <data name="Hex_Invalid" xml:space="preserve">
+    <value>Değer geçerli bir onaltılık (hexadecimal) metin değil.</value>
+  </data>
+  <data name="IBAN_Invalid" xml:space="preserve">
+    <value>IBAN numarası geçersiz.</value>
+  </data>
+  <data name="IpAddress_Invalid" xml:space="preserve">
+    <value>IP adresi biçimi geçersiz.</value>
+  </data>
+  <data name="Json_Invalid" xml:space="preserve">
+    <value>Değer geçerli bir JSON metni değil.</value>
+  </data>
+  <data name="Localization_InvalidCulture" xml:space="preserve">
+    <value>Geçerli bir kültür kodu olmalıdır (örn. en-US).</value>
+  </data>
+  <data name="Localization_InvalidLanguageTag" xml:space="preserve">
+    <value>Geçerli bir dil etiketi olmalıdır (örn. en-US, tr, fr-FR).</value>
+  </data>
+  <data name="Localization_InvalidTimeZone" xml:space="preserve">
+    <value>Geçerli bir zaman dilimi kimliği olmalıdır.</value>
+  </data>
+  <data name="Logic_CompareWithOther" xml:space="preserve">
+    <value>Bu alan başka bir alanla karşılaştırma kuralına uymalıdır.</value>
+  </data>
+  <data name="Logic_ConditionalRequired" xml:space="preserve">
+    <value>{0} dolu olduğunda bu alan zorunludur.</value>
+  </data>
+  <data name="Logic_ConditionalRequiredWithValue" xml:space="preserve">
+    <value>{0} '{1}' değerine eşit olduğunda bu alan zorunludur.</value>
+  </data>
+  <data name="Logic_DisallowedIf" xml:space="preserve">
+    <value>Bu alan belirli koşullarda boş bırakılmalıdır.</value>
+  </data>
+  <data name="Logic_EqualToOtherProperty" xml:space="preserve">
+    <value>Bu alan {0} ile eşit olmalıdır.</value>
+  </data>
+  <data name="Logic_MutuallyExclusiveProperties" xml:space="preserve">
+    <value>Aşağıdaki alanlardan yalnızca biri ayarlanmalıdır: {0}.</value>
+  </data>
+  <data name="Logic_NotEqualToOtherProperty" xml:space="preserve">
+    <value>Bu alan {0} ile eşit olmamalıdır.</value>
+  </data>
+  <data name="Logic_RequiredIf" xml:space="preserve">
+    <value>Bu alan belirli koşullarda zorunludur.</value>
+  </data>
+  <data name="MustBeNull" xml:space="preserve">
+    <value>Bu alan null olmalıdır.</value>
+  </data>
+  <data name="MustNotBeNull" xml:space="preserve">
+    <value>Bu alan null olmamalıdır.</value>
+  </data>
+  <data name="NationalId_Invalid" xml:space="preserve">
+    <value>Ulusal kimlik numarası geçersiz.</value>
+  </data>
+  <data name="Network_DomainName" xml:space="preserve">
+    <value>Geçerli bir alan adı olmalıdır.</value>
+  </data>
+  <data name="Network_HostnameWithPort" xml:space="preserve">
+    <value>Geçerli bir ana bilgisayar adı ve bağlantı noktası olmalıdır.</value>
+  </data>
+  <data name="Network_IPv6Address" xml:space="preserve">
+    <value>Geçerli bir IPv6 adresi olmalıdır.</value>
+  </data>
+  <data name="Number_DivisibleBy" xml:space="preserve">
+    <value>Değer {0} sayısına tam bölünebilmelidir.</value>
+  </data>
+  <data name="Number_Even" xml:space="preserve">
+    <value>Sayı çift olmalıdır.</value>
+  </data>
+  <data name="Number_MaxDigits" xml:space="preserve">
+    <value>Sayı en fazla {0} basamaklı olmalıdır.</value>
+  </data>
+  <data name="Number_MinDigits" xml:space="preserve">
+    <value>Sayı en az {0} basamaklı olmalıdır.</value>
+  </data>
+  <data name="Number_MultipleOf" xml:space="preserve">
+    <value>Sayı {0} sayısının katı olmalıdır.</value>
+  </data>
+  <data name="Number_NotZero" xml:space="preserve">
+    <value>Değer sıfır olmamalıdır.</value>
+  </data>
+  <data name="Number_Odd" xml:space="preserve">
+    <value>Sayı tek olmalıdır.</value>
+  </data>
+  <data name="Number_PercentageRange" xml:space="preserve">
+    <value>Değer yüzde olarak 0 ile 100 arasında olmalıdır.</value>
+  </data>
+  <data name="Number_PowerOfTwo" xml:space="preserve">
+    <value>Sayı iki tabanında bir kuvvet olmalıdır.</value>
+  </data>
+  <data name="Number_Prime" xml:space="preserve">
+    <value>Sayı asal sayı olmalıdır.</value>
+  </data>
+  <data name="Pagination_PageNumber" xml:space="preserve">
+    <value>Sayfa numarası ≥ 1 olmalıdır.</value>
+  </data>
+  <data name="Pagination_PageSize" xml:space="preserve">
+    <value>Sayfa boyutu 1 ile 100 arasında olmalıdır.</value>
+  </data>
+  <data name="Password_NumberRequired" xml:space="preserve">
+    <value>Parola en az bir sayı içermelidir.</value>
+  </data>
+  <data name="Password_SymbolRequired" xml:space="preserve">
+    <value>Parola en az bir sembol içermelidir.</value>
+  </data>
+  <data name="Password_UppercaseRequired" xml:space="preserve">
+    <value>Parola en az bir büyük harf içermelidir.</value>
+  </data>
+  <data name="Password_Weak" xml:space="preserve">
+    <value>Parola büyük/küçük harf, sayı ve özel karakter içermeli ve en az {minLength} karakter uzunluğunda olmalıdır.</value>
+  </data>
+  <data name="Phone_Invalid" xml:space="preserve">
+    <value>Telefon numarası biçimi geçersiz.</value>
+  </data>
+  <data name="Phone_TurkishMobile" xml:space="preserve">
+    <value>Geçerli bir Türk cep telefonu numarası olmalıdır.</value>
+  </data>
+  <data name="PostalCode_Invalid" xml:space="preserve">
+    <value>Posta kodu biçimi geçersiz.</value>
+  </data>
+  <data name="Regex_Invalid" xml:space="preserve">
+    <value>Değer gerekli biçimle eşleşmiyor.</value>
+  </data>
+  <data name="Security_Encrypted" xml:space="preserve">
+    <value>Girdi geçerli bir şifrelenmiş biçimde olmalıdır.</value>
+  </data>
+  <data name="Security_InvalidFileName" xml:space="preserve">
+    <value>Dosya adı geçersiz karakterler içermemelidir.</value>
+  </data>
+  <data name="Security_NoHtml" xml:space="preserve">
+    <value>Metin HTML etiketleri içermemelidir.</value>
+  </data>
+  <data name="Security_NoUnicodeSymbols" xml:space="preserve">
+    <value>Metin özel Unicode sembolleri veya emoji içermemelidir.</value>
+  </data>
+  <data name="Security_PasswordComplexity" xml:space="preserve">
+    <value>Parola en az {0} karakter olmalı ve bir harf, bir sayı ve bir sembol içermelidir.</value>
+  </data>
+  <data name="Security_SqlInjectionSafe" xml:space="preserve">
+    <value>Girdi SQL enjeksiyonuna karşı güvenli olmalıdır.</value>
+  </data>
+  <data name="Security_XssSafe" xml:space="preserve">
+    <value>Girdi potansiyel XSS içeriği içermemelidir.</value>
+  </data>
+  <data name="Slug_Invalid" xml:space="preserve">
+    <value>Değer geçerli bir slug olmalıdır (yalnızca küçük harf, rakam ve tire).</value>
+  </data>
+  <data name="String_AlphaNumericOnly" xml:space="preserve">
+    <value>Yalnızca harf ve rakamlara izin verilir.</value>
+  </data>
+  <data name="String_CamelCase" xml:space="preserve">
+    <value>Metin camelCase biçiminde olmalıdır (örneğin: exampleText).</value>
+  </data>
+  <data name="String_CountryCode" xml:space="preserve">
+    <value>Geçerli bir ülke kodu olmalıdır (ISO 3166-1 alpha-2).</value>
+  </data>
+  <data name="String_CurrencyCode" xml:space="preserve">
+    <value>Geçerli bir para birimi kodu olmalıdır (ISO 4217).</value>
+  </data>
+  <data name="String_EndsWith" xml:space="preserve">
+    <value>Değer gerekli sonek ile bitmelidir.</value>
+  </data>
+  <data name="String_HexColor" xml:space="preserve">
+    <value>Geçerli bir hex renk kodu olmalıdır (örneğin: #FFF veya #FFFFFF).</value>
+  </data>
+  <data name="String_Hostname" xml:space="preserve">
+    <value>Geçerli bir ana bilgisayar adı olmalıdır.</value>
+  </data>
+  <data name="String_JwtToken" xml:space="preserve">
+    <value>Geçerli bir JWT belirteci olmalıdır.</value>
+  </data>
+  <data name="String_KebabCase" xml:space="preserve">
+    <value>Metin kebab-case biçiminde olmalıdır (örneğin: example-text).</value>
+  </data>
+  <data name="String_LanguageCode" xml:space="preserve">
+    <value>Geçerli bir dil kodu olmalıdır (ISO 639-1).</value>
+  </data>
+  <data name="String_Lowercase" xml:space="preserve">
+    <value>Metin tamamen küçük harf olmalıdır.</value>
+  </data>
+  <data name="String_MacAddress" xml:space="preserve">
+    <value>Geçerli bir MAC adresi olmalıdır.</value>
+  </data>
+  <data name="String_MimeType" xml:space="preserve">
+    <value>Geçerli bir MIME türü olmalıdır (örneğin: image/png).</value>
+  </data>
+  <data name="String_NoSpecialCharacters" xml:space="preserve">
+    <value>Özel karakter içermemelidir.</value>
+  </data>
+  <data name="String_NoWhitespace" xml:space="preserve">
+    <value>Değer boşluk karakteri içermemelidir.</value>
+  </data>
+  <data name="String_OnlyLetters" xml:space="preserve">
+    <value>Bu alan yalnızca harf içermelidir.</value>
+  </data>
+  <data name="String_OnlyLetters_Optional" xml:space="preserve">
+    <value>Boş değilse, yalnızca harf ve boşluk içermelidir.</value>
+  </data>
+  <data name="String_PascalCase" xml:space="preserve">
+    <value>Metin PascalCase biçiminde olmalıdır (örneğin: ExampleText).</value>
+  </data>
+  <data name="String_SpecialCharRequired" xml:space="preserve">
+    <value>Değer en az bir özel karakter içermelidir.</value>
+  </data>
+  <data name="String_StartsWith" xml:space="preserve">
+    <value>Değer gerekli önek ile başlamalıdır.</value>
+  </data>
+  <data name="String_StartsWithUppercase" xml:space="preserve">
+    <value>Bu alan büyük harf ile başlamalıdır.</value>
+  </data>
+  <data name="String_TrimmedEmpty" xml:space="preserve">
+    <value>Bu alan boş veya yalnızca boşluk olamaz.</value>
+  </data>
+  <data name="String_Uppercase" xml:space="preserve">
+    <value>Metin tamamen büyük harf olmalıdır.</value>
+  </data>
+  <data name="String_Version" xml:space="preserve">
+    <value>Geçerli bir sürüm biçimi olmalıdır (örneğin: 1.0.0).</value>
+  </data>
+  <data name="Time_Range" xml:space="preserve">
+    <value>Süre {0} ile {1} arasında olmalıdır.</value>
+  </data>
+  <data name="Url_Instagram" xml:space="preserve">
+    <value>Geçerli bir Instagram URL’si olmalıdır.</value>
+  </data>
+  <data name="Url_Invalid" xml:space="preserve">
+    <value>URL biçimi geçersiz. Yalnızca HTTP ve HTTPS URL’lerine izin verilir.</value>
+  </data>
+  <data name="Url_YouTube" xml:space="preserve">
+    <value>Geçerli bir YouTube URL’si olmalıdır.</value>
+  </data>
+  <data name="Xml_Invalid" xml:space="preserve">
+    <value>Değer geçerli bir XML metni değil.</value>
+  </data>
+</root>
