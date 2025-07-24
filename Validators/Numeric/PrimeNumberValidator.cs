@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Numeric;
 
-public sealed class PrimeNumberValidator<T> : PropertyValidator<T, int>
+public sealed class PrimeNumberValidator<T> : BaseValidator<T, int>
 {
     public override string Name => nameof(PrimeNumberValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, int value)
+    protected override bool IsValidInternal(ValidationContext<T> context, int value)
     {
         if (value <= 1)
             return false;
@@ -29,5 +29,5 @@ public sealed class PrimeNumberValidator<T> : PropertyValidator<T, int>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Number_Prime;
+        ValidationResource.Number_Prime;
 }

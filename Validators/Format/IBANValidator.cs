@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Numerics;
 using System.Text;
@@ -8,11 +8,11 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class IBANValidator<T> : PropertyValidator<T, string>
+public sealed class IBANValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(IBANValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -44,5 +44,5 @@ public sealed class IBANValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.IBAN_Invalid;
+        ValidationResource.IBAN_Invalid;
 }

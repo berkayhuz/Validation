@@ -1,13 +1,12 @@
-﻿using FluentValidation;
-using FluentValidation.Validators;
+﻿using System.Text.RegularExpressions;
 
-using System.Text.RegularExpressions;
+using FluentValidation;
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Network;
 
-public sealed class HostnameWithPortValidator<T> : PropertyValidator<T, string>
+public sealed class HostnameWithPortValidator<T> : BaseValidator<T, string>
 {
     // Hostname + colon + port (1-5 digit)
     private static readonly Regex _hostPortRegex =
@@ -15,7 +14,7 @@ public sealed class HostnameWithPortValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(HostnameWithPortValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -32,5 +31,5 @@ public sealed class HostnameWithPortValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Network_HostnameWithPort;
+        ValidationResource.Network_HostnameWithPort;
 }

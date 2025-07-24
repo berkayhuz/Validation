@@ -31,6 +31,6 @@ public sealed class DateRangeValidator<T> : AbstractValidator<T> where T : IHasD
     {
         RuleFor(x => x.StartDate)
             .LessThanOrEqualTo(x => x.EndDate)
-            .WithMessage(ValidationMessages.DateRange_StartAfterEnd);
+            .WithMessage(ValidationResource.DateRange_StartAfterEnd);
     }
 }

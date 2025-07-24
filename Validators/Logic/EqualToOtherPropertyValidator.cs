@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Reflection;
 
@@ -7,7 +7,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Logic;
 
-public sealed class EqualToOtherPropertyValidator<T> : PropertyValidator<T, string>
+public sealed class EqualToOtherPropertyValidator<T> : BaseValidator<T, string>
 {
     private readonly string _otherPropertyName;
 
@@ -18,7 +18,7 @@ public sealed class EqualToOtherPropertyValidator<T> : PropertyValidator<T, stri
 
     public override string Name => nameof(EqualToOtherPropertyValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         var instance = context.InstanceToValidate;
         var otherProperty = typeof(T).GetProperty(_otherPropertyName, BindingFlags.Public | BindingFlags.Instance);
@@ -30,5 +30,5 @@ public sealed class EqualToOtherPropertyValidator<T> : PropertyValidator<T, stri
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        string.Format(ValidationMessages.Logic_EqualToOtherProperty, _otherPropertyName);
+        string.Format(ValidationResource.Logic_EqualToOtherProperty, _otherPropertyName);
 }

@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Xml;
 
@@ -7,11 +7,11 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class XmlStringValidator<T> : PropertyValidator<T, string>
+public sealed class XmlStringValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(XmlStringValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -29,5 +29,5 @@ public sealed class XmlStringValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Xml_Invalid;
+        ValidationResource.Xml_Invalid;
 }

@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Text.Json;
 
@@ -7,11 +7,11 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class JsonStringValidator<T> : PropertyValidator<T, string>
+public sealed class JsonStringValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(JsonStringValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -28,5 +28,5 @@ public sealed class JsonStringValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Json_Invalid;
+        ValidationResource.Json_Invalid;
 }

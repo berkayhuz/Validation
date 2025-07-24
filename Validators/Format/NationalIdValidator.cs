@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class NationalIdValidator<T> : PropertyValidator<T, string>
+public sealed class NationalIdValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(NationalIdValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value) || value.Length != 11 || !value.All(char.IsDigit))
             return false;
@@ -29,5 +29,5 @@ public sealed class NationalIdValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.NationalId_Invalid;
+        ValidationResource.NationalId_Invalid;
 }

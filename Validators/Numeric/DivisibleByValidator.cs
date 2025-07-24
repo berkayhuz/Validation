@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Numeric;
 
-public sealed class DivisibleByValidator<T> : PropertyValidator<T, int>
+public sealed class DivisibleByValidator<T> : BaseValidator<T, int>
 {
     private readonly int _divisor;
 
@@ -16,11 +16,11 @@ public sealed class DivisibleByValidator<T> : PropertyValidator<T, int>
 
     public override string Name => nameof(DivisibleByValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, int value)
+    protected override bool IsValidInternal(ValidationContext<T> context, int value)
     {
         return _divisor != 0 && value % _divisor == 0;
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        string.Format(ValidationMessages.Number_DivisibleBy, _divisor);
+        string.Format(ValidationResource.Number_DivisibleBy, _divisor);
 }

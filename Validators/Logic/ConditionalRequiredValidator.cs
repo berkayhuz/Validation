@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Reflection;
 
@@ -7,7 +7,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Logic;
 
-public sealed class ConditionalRequiredValidator<T> : PropertyValidator<T, string>
+public sealed class ConditionalRequiredValidator<T> : BaseValidator<T, string>
 {
     private readonly string _dependentPropertyName;
     private readonly string? _requiredWhenValue;
@@ -20,7 +20,7 @@ public sealed class ConditionalRequiredValidator<T> : PropertyValidator<T, strin
 
     public override string Name => nameof(ConditionalRequiredValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         var instance = context.InstanceToValidate;
         var dependentProp = typeof(T).GetProperty(_dependentPropertyName, BindingFlags.Public | BindingFlags.Instance);
@@ -40,7 +40,7 @@ public sealed class ConditionalRequiredValidator<T> : PropertyValidator<T, strin
     protected override string GetDefaultMessageTemplate(string errorCode)
     {
         return _requiredWhenValue is null
-            ? string.Format(ValidationMessages.Logic_ConditionalRequired, _dependentPropertyName)
-            : string.Format(ValidationMessages.Logic_ConditionalRequiredWithValue, _dependentPropertyName, _requiredWhenValue);
+            ? string.Format(ValidationResource.Logic_ConditionalRequired, _dependentPropertyName)
+            : string.Format(ValidationResource.Logic_ConditionalRequiredWithValue, _dependentPropertyName, _requiredWhenValue);
     }
 }

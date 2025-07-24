@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
-public sealed class UrlValidator<T> : PropertyValidator<T, string>
+public sealed class UrlValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(UrlValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -18,5 +18,5 @@ public sealed class UrlValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Url_Invalid;
+        ValidationResource.Url_Invalid;
 }

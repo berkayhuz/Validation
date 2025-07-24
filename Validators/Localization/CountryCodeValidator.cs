@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Localization;
 
-public sealed class CountryCodeValidator<T> : PropertyValidator<T, string>
+public sealed class CountryCodeValidator<T> : BaseValidator<T, string>
 {
     private static readonly HashSet<string> _validCountryCodes = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -18,11 +18,11 @@ public sealed class CountryCodeValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(CountryCodeValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         return !string.IsNullOrWhiteSpace(value) && _validCountryCodes.Contains(value.Trim().ToUpper());
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.String_CountryCode;
+        ValidationResource.String_CountryCode;
 }

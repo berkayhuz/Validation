@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Localization;
 
-public sealed class CurrencyValidator<T> : PropertyValidator<T, string>
+public sealed class CurrencyValidator<T> : BaseValidator<T, string>
 {
     // ISO 4217 standardındaki yaygın kodlar (dilersen external resource'tan yükleyebilirim)
     private static readonly HashSet<string> _validCurrencies =
@@ -16,7 +16,7 @@ public sealed class CurrencyValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(CurrencyValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         return !string.IsNullOrWhiteSpace(value)
                && value.Length == 3
@@ -24,5 +24,5 @@ public sealed class CurrencyValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Currency_Invalid;
+        ValidationResource.Currency_Invalid;
 }

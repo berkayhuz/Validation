@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Reflection;
 
@@ -7,7 +7,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Logic;
 
-public sealed class MutuallyExclusivePropertiesValidator<T> : PropertyValidator<T, T>
+public sealed class MutuallyExclusivePropertiesValidator<T> : BaseValidator<T, T>
 {
     private readonly string[] _propertyNames;
 
@@ -18,7 +18,7 @@ public sealed class MutuallyExclusivePropertiesValidator<T> : PropertyValidator<
 
     public override string Name => nameof(MutuallyExclusivePropertiesValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, T value)
+    protected override bool IsValidInternal(ValidationContext<T> context, T value)
     {
         if (_propertyNames.Length < 2)
             return true;
@@ -33,5 +33,5 @@ public sealed class MutuallyExclusivePropertiesValidator<T> : PropertyValidator<
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        string.Format(ValidationMessages.Logic_MutuallyExclusiveProperties, string.Join(", ", _propertyNames));
+        string.Format(ValidationResource.Logic_MutuallyExclusiveProperties, string.Join(", ", _propertyNames));
 }

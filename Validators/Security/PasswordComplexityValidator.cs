@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Text.RegularExpressions;
 
@@ -7,7 +7,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Security;
 
-public sealed class PasswordComplexityValidator<T> : PropertyValidator<T, string>
+public sealed class PasswordComplexityValidator<T> : BaseValidator<T, string>
 {
     private readonly int _minLength;
 
@@ -22,7 +22,7 @@ public sealed class PasswordComplexityValidator<T> : PropertyValidator<T, string
 
     public override string Name => nameof(PasswordComplexityValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         return !string.IsNullOrWhiteSpace(value)
             && value.Length >= _minLength
@@ -32,5 +32,5 @@ public sealed class PasswordComplexityValidator<T> : PropertyValidator<T, string
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        string.Format(ValidationMessages.Security_PasswordComplexity, _minLength);
+        string.Format(ValidationResource.Security_PasswordComplexity, _minLength);
 }

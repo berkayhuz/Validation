@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Localization;
 
-public sealed class CurrencyCodeValidator<T> : PropertyValidator<T, string>
+public sealed class CurrencyCodeValidator<T> : BaseValidator<T, string>
 {
     private static readonly HashSet<string> _validCurrencyCodes = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -16,11 +16,11 @@ public sealed class CurrencyCodeValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(CurrencyCodeValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         return !string.IsNullOrWhiteSpace(value) && _validCurrencyCodes.Contains(value.Trim().ToUpper());
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.String_CurrencyCode;
+        ValidationResource.String_CurrencyCode;
 }

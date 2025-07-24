@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Numeric;
 
-public sealed class MaxDigitsValidator<T> : PropertyValidator<T, int>
+public sealed class MaxDigitsValidator<T> : BaseValidator<T, int>
 {
     private readonly int _maxDigits;
 
@@ -16,12 +16,12 @@ public sealed class MaxDigitsValidator<T> : PropertyValidator<T, int>
 
     public override string Name => nameof(MaxDigitsValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, int value)
+    protected override bool IsValidInternal(ValidationContext<T> context, int value)
     {
         var digitCount = Math.Abs(value).ToString().Length;
         return digitCount <= _maxDigits;
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        string.Format(ValidationMessages.Number_MaxDigits, _maxDigits);
+        string.Format(ValidationResource.Number_MaxDigits, _maxDigits);
 }

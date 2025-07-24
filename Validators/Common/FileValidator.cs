@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
 
 using Microsoft.AspNetCore.Http;
 
@@ -7,7 +6,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Common;
 
-public sealed class FileValidator<T> : PropertyValidator<T, IFormFile>
+public sealed class FileValidator<T> : BaseValidator<T, IFormFile>
 {
     private readonly long _maxSizeInBytes;
     private readonly string[] _allowedExtensions;
@@ -25,7 +24,7 @@ public sealed class FileValidator<T> : PropertyValidator<T, IFormFile>
 
     public override string Name => nameof(FileValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, IFormFile value)
+    protected override bool IsValidInternal(ValidationContext<T> context, IFormFile value)
     {
         if (value is null)
             return true;
@@ -45,5 +44,5 @@ public sealed class FileValidator<T> : PropertyValidator<T, IFormFile>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.File_Invalid;
+        ValidationResource.File_Invalid;
 }

@@ -21,10 +21,10 @@ public sealed class PaginationValidator<T> : AbstractValidator<T> where T : IPag
     {
         RuleFor(x => x.PageNumber)
             .GreaterThanOrEqualTo(1)
-            .WithMessage(ValidationMessages.Pagination_PageNumber);
+            .WithMessage(ValidationResource.Pagination_PageNumber);
 
         RuleFor(x => x.PageSize)
             .InclusiveBetween(1, 100)
-            .WithMessage(ValidationMessages.Pagination_PageSize);
+            .WithMessage(ValidationResource.Pagination_PageSize);
     }
 }

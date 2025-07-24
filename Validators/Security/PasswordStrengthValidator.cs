@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using System.Text.RegularExpressions;
 
@@ -7,7 +7,7 @@ using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Security;
 
-public sealed class PasswordStrengthValidator<T> : PropertyValidator<T, string>
+public sealed class PasswordStrengthValidator<T> : BaseValidator<T, string>
 {
     private static readonly Regex _upperCaseRegex = new("[A-Z]", RegexOptions.Compiled);
     private static readonly Regex _lowerCaseRegex = new("[a-z]", RegexOptions.Compiled);
@@ -23,7 +23,7 @@ public sealed class PasswordStrengthValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(PasswordStrengthValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value) || value.Length < _minLength)
             return false;
@@ -35,5 +35,5 @@ public sealed class PasswordStrengthValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Password_Weak;
+        ValidationResource.Password_Weak;
 }

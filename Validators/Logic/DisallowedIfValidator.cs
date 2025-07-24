@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Logic;
 
-public sealed class DisallowedIfValidator<T, TProperty> : PropertyValidator<T, TProperty>
+public sealed class DisallowedIfValidator<T, TProperty> : BaseValidator<T, TProperty>
 {
     private readonly Func<T, bool> _condition;
 
@@ -16,7 +16,7 @@ public sealed class DisallowedIfValidator<T, TProperty> : PropertyValidator<T, T
 
     public override string Name => nameof(DisallowedIfValidator<T, TProperty>);
 
-    public override bool IsValid(ValidationContext<T> context, TProperty value)
+    protected override bool IsValidInternal(ValidationContext<T> context, TProperty value)
     {
         if (_condition(context.InstanceToValidate))
             return value is null || string.IsNullOrWhiteSpace(value?.ToString());
@@ -25,5 +25,5 @@ public sealed class DisallowedIfValidator<T, TProperty> : PropertyValidator<T, T
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Logic_DisallowedIf;
+        ValidationResource.Logic_DisallowedIf;
 }

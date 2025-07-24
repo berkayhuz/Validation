@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Numeric;
 
-public sealed class DecimalPrecisionValidator<T> : PropertyValidator<T, decimal>
+public sealed class DecimalPrecisionValidator<T> : BaseValidator<T, decimal>
 {
     private readonly int _maxPrecision;
     private readonly int _maxScale;
@@ -18,7 +18,7 @@ public sealed class DecimalPrecisionValidator<T> : PropertyValidator<T, decimal>
 
     public override string Name => nameof(DecimalPrecisionValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, decimal value)
+    protected override bool IsValidInternal(ValidationContext<T> context, decimal value)
     {
         var parts = value.ToString(System.Globalization.CultureInfo.InvariantCulture).Split('.');
 
@@ -30,5 +30,5 @@ public sealed class DecimalPrecisionValidator<T> : PropertyValidator<T, decimal>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Decimal_PrecisionExceeded;
+        ValidationResource.Decimal_PrecisionExceeded;
 }

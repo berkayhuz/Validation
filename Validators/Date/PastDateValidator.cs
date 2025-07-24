@@ -1,19 +1,19 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Date;
 
-public sealed class PastDateValidator<T> : PropertyValidator<T, DateTime>
+public sealed class PastDateValidator<T> : BaseValidator<T, DateTime>
 {
     public override string Name => nameof(PastDateValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, DateTime value)
+    protected override bool IsValidInternal(ValidationContext<T> context, DateTime value)
     {
         return value < System.DateTime.UtcNow;
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Date_Past;
+        ValidationResource.Date_Past;
 }

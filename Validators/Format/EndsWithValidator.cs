@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class EndsWithValidator<T> : PropertyValidator<T, string>
+public sealed class EndsWithValidator<T> : BaseValidator<T, string>
 {
     private readonly string _suffix;
     private readonly StringComparison _comparison;
@@ -18,11 +18,11 @@ public sealed class EndsWithValidator<T> : PropertyValidator<T, string>
 
     public override string Name => nameof(EndsWithValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         return !string.IsNullOrWhiteSpace(value) && value.EndsWith(_suffix, _comparison);
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.String_EndsWith;
+        ValidationResource.String_EndsWith;
 }

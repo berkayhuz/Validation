@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Logic;
 
-public sealed class CompareWithOtherPropertyValidator<T> : PropertyValidator<T, IComparable>
+public sealed class CompareWithOtherPropertyValidator<T> : BaseValidator<T, IComparable>
 {
     private readonly Func<T, IComparable> _otherSelector;
     private readonly Func<IComparable, IComparable, bool> _comparer;
@@ -20,12 +20,12 @@ public sealed class CompareWithOtherPropertyValidator<T> : PropertyValidator<T, 
 
     public override string Name => nameof(CompareWithOtherPropertyValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, IComparable value)
+    protected override bool IsValidInternal(ValidationContext<T> context, IComparable value)
     {
         var other = _otherSelector(context.InstanceToValidate);
         return value != null && other != null && _comparer(value, other);
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Logic_CompareWithOther;
+        ValidationResource.Logic_CompareWithOther;
 }

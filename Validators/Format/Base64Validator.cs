@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class Base64Validator<T> : PropertyValidator<T, string>
+public sealed class Base64Validator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(Base64Validator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -27,5 +27,5 @@ public sealed class Base64Validator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.Base64_Invalid;
+        ValidationResource.Base64_Invalid;
 }

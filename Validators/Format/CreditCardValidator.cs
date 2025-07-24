@@ -1,15 +1,15 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
+
 
 using Validation.Core.Messages;
 
 namespace Validation.Core.Validators.Format;
 
-public sealed class CreditCardValidator<T> : PropertyValidator<T, string>
+public sealed class CreditCardValidator<T> : BaseValidator<T, string>
 {
     public override string Name => nameof(CreditCardValidator<T>);
 
-    public override bool IsValid(ValidationContext<T> context, string value)
+    protected override bool IsValidInternal(ValidationContext<T> context, string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             return false;
@@ -41,5 +41,5 @@ public sealed class CreditCardValidator<T> : PropertyValidator<T, string>
     }
 
     protected override string GetDefaultMessageTemplate(string errorCode) =>
-        ValidationMessages.CreditCard_Invalid;
+        ValidationResource.CreditCard_Invalid;
 }
