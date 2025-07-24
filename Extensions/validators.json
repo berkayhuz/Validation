@@ -1,0 +1,868 @@
+﻿[
+    {
+        "methodName": "NotEmptyGuid",
+        "validatorType": "GuidNotEmptyValidator<T>",
+        "valueType": "Guid",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidEmail",
+        "validatorType": "EmailValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "TrimmedNotEmpty",
+        "validatorType": "TrimmedNotEmptyValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidPhone",
+        "validatorType": "PhoneNumberValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidUrl",
+        "validatorType": "UrlValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidIpAddress",
+        "validatorType": "IpAddressValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "NotInFuture",
+        "validatorType": "DateNotInFutureValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "NotInPast",
+        "validatorType": "DateNotInPastValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "HasPrecision",
+        "validatorType": "DecimalPrecisionValidator<T>",
+        "valueType": "decimal",
+        "parameters": [
+            {
+                "name": "maxPrecision",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "maxScale",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "maxPrecision, maxScale"
+    },
+    {
+        "methodName": "ValidFile",
+        "validatorType": "FileValidator<T>",
+        "valueType": "IFormFile",
+        "parameters": [
+            {
+                "name": "maxSizeInMb",
+                "type": "long",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "allowedExtensions",
+                "type": "string[]",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "allowedContentTypes",
+                "type": "string[]",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "maxSizeInMb * 1024 * 1024,\n                allowedExtensions,\n                allowedContentTypes"
+    },
+    {
+        "methodName": "StrongPassword",
+        "validatorType": "PasswordStrengthValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "minLength",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": "8"
+            }
+        ],
+        "customConstructorArgs": "minLength"
+    },
+    {
+        "methodName": "ValidBase64",
+        "validatorType": "Base64Validator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidHex",
+        "validatorType": "HexStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidAccessToken",
+        "validatorType": "AccessTokenFormatValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidNationalId",
+        "validatorType": "NationalIdValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidPostalCode",
+        "validatorType": "PostalCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidCreditCard",
+        "validatorType": "CreditCardValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidIban",
+        "validatorType": "IBANValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidCurrency",
+        "validatorType": "CurrencyValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "OnlyLetters",
+        "validatorType": "OnlyLettersValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "AlphaNumeric",
+        "validatorType": "AlphaNumericValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ContainsSpecialCharacter",
+        "validatorType": "ContainsSpecialCharactersValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "StartsWith",
+        "validatorType": "StartsWithValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "prefix",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "caseSensitive",
+                "type": "bool",
+                "nullable": false,
+                "defaultValue": "false"
+            }
+        ],
+        "customConstructorArgs": "prefix, caseSensitive"
+    },
+    {
+        "methodName": "EndsWith",
+        "validatorType": "EndsWithValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "suffix",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "caseSensitive",
+                "type": "bool",
+                "nullable": false,
+                "defaultValue": "false"
+            }
+        ],
+        "customConstructorArgs": "suffix, caseSensitive"
+    },
+    {
+        "methodName": "NoWhitespace",
+        "validatorType": "NoWhitespaceValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidSlug",
+        "validatorType": "SlugValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MatchesRegex",
+        "validatorType": "RegexValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "pattern",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "options",
+                "type": "RegexOptions",
+                "nullable": false,
+                "defaultValue": "RegexOptions.None"
+            }
+        ],
+        "customConstructorArgs": "pattern, options"
+    },
+    {
+        "methodName": "ValidJson",
+        "validatorType": "JsonStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidXml",
+        "validatorType": "XmlStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidMacAddress",
+        "validatorType": "MacAddressValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidHostname",
+        "validatorType": "HostnameValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidYouTubeUrl",
+        "validatorType": "YouTubeUrlValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidInstagramUrl",
+        "validatorType": "InstagramUrlValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidVersionString",
+        "validatorType": "VersionStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "ValidJwtToken",
+        "validatorType": "JwtTokenValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBePrime",
+        "validatorType": "PrimeNumberValidator<T>",
+        "valueType": "int",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBePowerOfTwo",
+        "validatorType": "PowerOfTwoValidator<T>",
+        "valueType": "int",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeEven",
+        "validatorType": "EvenNumberValidator<T>",
+        "valueType": "int",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeOdd",
+        "validatorType": "OddNumberValidator<T>",
+        "valueType": "int",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeMultipleOf",
+        "validatorType": "MultipleOfValidator<T>",
+        "valueType": "int",
+        "parameters": [
+            {
+                "name": "divisor",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "divisor"
+    },
+    {
+        "methodName": "MustHaveMinimumDigits",
+        "validatorType": "MinDigitsValidator<T>",
+        "valueType": "int",
+        "parameters": [
+            {
+                "name": "minDigits",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "minDigits"
+    },
+    {
+        "methodName": "MustHaveMaximumDigits",
+        "validatorType": "MaxDigitsValidator<T>",
+        "valueType": "int",
+        "parameters": [
+            {
+                "name": "maxDigits",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "maxDigits"
+    },
+    {
+        "methodName": "MustBeInTimeRange",
+        "validatorType": "TimeRangeValidator<T>",
+        "valueType": "TimeOnly",
+        "parameters": [
+            {
+                "name": "start",
+                "type": "TimeOnly",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "end",
+                "type": "TimeOnly",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "start, end"
+    },
+    {
+        "methodName": "MustBeWeekend",
+        "validatorType": "WeekendValidator<T>",
+        "valueType": "DateOnly",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeWeekday",
+        "validatorType": "WeekdayValidator<T>",
+        "valueType": "DateOnly",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeInLeapYear",
+        "validatorType": "LeapYearValidator<T>",
+        "valueType": "DateOnly",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeBusinessDay",
+        "validatorType": "BusinessDayValidator<T>",
+        "valueType": "DateOnly",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustContainUppercase",
+        "validatorType": "PasswordHasUppercaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustContainNumber",
+        "validatorType": "PasswordHasNumberValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustContainSymbol",
+        "validatorType": "PasswordHasSymbolValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeXssSafe",
+        "validatorType": "XssSafeStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeSqlInjectionSafe",
+        "validatorType": "SqlInjectionSafeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeEncryptedFormat",
+        "validatorType": "EncryptedStringValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidCountryCode",
+        "validatorType": "CountryCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidLanguageCode",
+        "validatorType": "LanguageCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidCurrencyCode",
+        "validatorType": "CurrencyCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidTurkishPhoneNumber",
+        "validatorType": "TurkishPhoneNumberValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeEqualTo",
+        "validatorType": "EqualToOtherPropertyValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "otherPropertyName",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "otherPropertyName"
+    },
+    {
+        "methodName": "MustNotBeEqualTo",
+        "validatorType": "NotEqualToOtherPropertyValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "otherPropertyName",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "otherPropertyName"
+    },
+    {
+        "methodName": "RequiredWhen",
+        "validatorType": "ConditionalRequiredValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "dependentProperty",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "requiredWhenValue",
+                "type": "string",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "dependentProperty, requiredWhenValue"
+    },
+    {
+        "methodName": "MustHaveOnlyOneSet",
+        "validatorType": "MutuallyExclusivePropertiesValidator<T>",
+        "valueType": "T",
+        "parameters": [
+            {
+                "name": "propertyNames",
+                "type": "params string[]",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "propertyNames"
+    },
+    {
+        "methodName": "AlwaysValid",
+        "validatorType": "AlwaysValidValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "AlwaysInvalid",
+        "validatorType": "AlwaysInvalidValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustStartWithUppercase",
+        "validatorType": "StartsWithUppercaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "LettersIfNotEmpty",
+        "validatorType": "OptionalOnlyLettersValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "NoSpecialCharacters",
+        "validatorType": "NoSpecialCharactersValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeDateOnly",
+        "validatorType": "DateOnlyValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeInFuture",
+        "validatorType": "FutureDateValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeInPast",
+        "validatorType": "PastDateValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeUtc",
+        "validatorType": "UtcDateValidator<T>",
+        "valueType": "DateTime",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBePercentage",
+        "validatorType": "RangePercentageValidator<T>",
+        "valueType": "decimal",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustNotBeZero",
+        "validatorType": "NotZeroValidator<T>",
+        "valueType": "int",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeDivisibleBy",
+        "validatorType": "DivisibleByValidator<T>",
+        "valueType": "int",
+        "parameters": [
+            {
+                "name": "divisor",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "divisor"
+    },
+    {
+        "methodName": "MustBeUppercase",
+        "validatorType": "UppercaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeLowercase",
+        "validatorType": "LowercaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeKebabCase",
+        "validatorType": "KebabCaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeCamelCase",
+        "validatorType": "CamelCaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBePascalCase",
+        "validatorType": "PascalCaseValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeHexColorCode",
+        "validatorType": "HexColorCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeMimeType",
+        "validatorType": "MimeTypeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeComplexPassword",
+        "validatorType": "PasswordComplexityValidator<T>",
+        "valueType": "string",
+        "parameters": [
+            {
+                "name": "minLength",
+                "type": "int",
+                "nullable": false,
+                "defaultValue": "8"
+            }
+        ],
+        "customConstructorArgs": "minLength"
+    },
+    {
+        "methodName": "MustNotContainUnicodeSymbols",
+        "validatorType": "NoUnicodeSymbolsValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustNotContainHtml",
+        "validatorType": "NoHtmlValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeSafeFileName",
+        "validatorType": "SafeFileNameValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeHostnameWithPort",
+        "validatorType": "HostnameWithPortValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeIPv6Address",
+        "validatorType": "IPv6AddressValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeDomainName",
+        "validatorType": "DomainNameValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidTimeZone",
+        "validatorType": "TimeZoneIdValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidCultureCode",
+        "validatorType": "CultureCodeValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeValidLanguageTag",
+        "validatorType": "LanguageTagValidator<T>",
+        "valueType": "string",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "RequiredIf",
+        "validatorType": "RequiredIfValidator<T, TProperty>",
+        "valueType": "TProperty",
+        "parameters": [
+            {
+                "name": "condition",
+                "type": "Func<T, bool>",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "condition"
+    },
+    {
+        "methodName": "DisallowedIf",
+        "validatorType": "DisallowedIfValidator<T, TProperty>",
+        "valueType": "TProperty",
+        "parameters": [
+            {
+                "name": "condition",
+                "type": "Func<T, bool>",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "condition"
+    },
+    {
+        "methodName": "MustSatisfyComparison",
+        "validatorType": "CompareWithOtherPropertyValidator<T>",
+        "valueType": "IComparable",
+        "parameters": [
+            {
+                "name": "otherSelector",
+                "type": "Func<T, IComparable>",
+                "nullable": false,
+                "defaultValue": ""
+            },
+            {
+                "name": "comparer",
+                "type": "Func<IComparable, IComparable, bool>",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "otherSelector, comparer"
+    },
+    {
+        "methodName": "MustBeNull",
+        "validatorType": "NullValidator<T, TProperty>",
+        "valueType": "TProperty",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustNotBeNull",
+        "validatorType": "NotNullOverrideValidator<T, TProperty>",
+        "valueType": "TProperty",
+        "parameters": [],
+        "customConstructorArgs": ""
+    },
+    {
+        "methodName": "MustBeConstant",
+        "validatorType": "ConstantValueValidator<T, TValue>",
+        "valueType": "TValue",
+        "parameters": [
+            {
+                "name": "expected",
+                "type": "TValue",
+                "nullable": false,
+                "defaultValue": ""
+            }
+        ],
+        "customConstructorArgs": "expected"
+    }
+]
